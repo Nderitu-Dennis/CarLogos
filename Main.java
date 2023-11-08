@@ -1,18 +1,11 @@
 package CarFun;
 
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-
 import javax.swing.*;
-
-
-
-
-
 
 public class Main extends JFrame {
 
@@ -148,11 +141,7 @@ public class Main extends JFrame {
     });
     timer.start();  
     
-  }
-
-   
-  
-    
+  }   
 
 public void bmw(){
   ImageIcon bmw =new ImageIcon("logos/bmw.jpg");     
@@ -174,17 +163,12 @@ public void bmw(){
                   countDownTextField.setText("BMW");               
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
-            }
-
-                       
+            }                       
         }
     });
     imageDisplayThread.start();
     
-  }  
-   
-
-
+  } 
 
    public void audi(){
      ImageIcon audi =new ImageIcon("logos/audi.jpg");     
@@ -206,9 +190,7 @@ public void bmw(){
                       countDownTextField.setText("Audi");
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
-                }
-
-                            
+                }                            
             }
         });
         imageDisplayThread.start();
