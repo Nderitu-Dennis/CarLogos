@@ -73,43 +73,43 @@ public class Main extends JFrame {
 
     btn1.addActionListener(e->{  
       timerFunction(); 
-      bmw();
+      carModel("bmw");
      
     });
 
     btn2.addActionListener(e->{         
       timerFunction();
-      audi();
+      carModel("audi");
     });
 
 
     btn3.addActionListener(e->{
-      mazda();
+      carModel("mazda");
       timerFunction();      
     });
 
      btn4.addActionListener(e->{
-      mercedes();
+      carModel("mercedes");
       timerFunction();      
     });
 
      btn5.addActionListener(e->{
-      mitsubishi();
+      carModel("mitsubishi");
       timerFunction();      
     });
 
      btn6.addActionListener(e->{
-      rolls_royce();
+      carModel("rolls_royce");
       timerFunction();      
     });
 
      btn7.addActionListener(e->{
-      subaru();
+       carModel("subaru");
       timerFunction();      
     });
 
      btn8.addActionListener(e->{
-      toyota();
+       carModel("toyota");
       timerFunction();      
     });
 
@@ -141,10 +141,13 @@ public class Main extends JFrame {
     });
     timer.start();  
     
-  }   
+  } 
 
-public void bmw(){
-  ImageIcon bmw =new ImageIcon("logos/bmw.jpg");     
+  public String carModel(String car){
+    
+
+    if(car=="bmw"){
+      ImageIcon bmw =new ImageIcon("logos/bmw.jpg");     
 
         // Create a new thread to display the image
         Thread imageDisplayThread = new Thread(new Runnable() {
@@ -166,12 +169,12 @@ public void bmw(){
             }                       
         }
     });
-    imageDisplayThread.start();
+    imageDisplayThread.start();  
     
-  } 
+  }
 
-   public void audi(){
-     ImageIcon audi =new ImageIcon("logos/audi.jpg");     
+  else if(car=="audi"){
+       ImageIcon audi =new ImageIcon("logos/audi.jpg");     
 
            // Create a new thread to display the image
            Thread imageDisplayThread = new Thread(new Runnable() {
@@ -194,11 +197,11 @@ public void bmw(){
             }
         });
         imageDisplayThread.start();
-       
-      } 
 
-   public void mazda(){
-     ImageIcon mazda =new ImageIcon("logos/mazda.jpg");     
+  }
+
+  else if(car=="mazda"){
+    ImageIcon mazda =new ImageIcon("logos/mazda.jpg");     
 
            // Create a new thread to display the image
            Thread imageDisplayThread = new Thread(new Runnable() {
@@ -222,12 +225,12 @@ public void bmw(){
                            
             }
         });
-        imageDisplayThread.start();
-       
-      }  
-      
-     public void mercedes(){
-     ImageIcon mercedes =new ImageIcon("logos/mercedes.jpg");     
+        imageDisplayThread.start();     
+
+  }
+
+  else if(car=="mercedes"){
+    ImageIcon mercedes =new ImageIcon("logos/mercedes.jpg");     
 
            // Create a new thread to display the image
            Thread imageDisplayThread = new Thread(new Runnable() {
@@ -251,9 +254,10 @@ public void bmw(){
         });
         imageDisplayThread.start();
        
-      }  
 
-      public void mitsubishi(){
+  }
+
+  else if(car=="mitsubishi"){
      ImageIcon mitsubishi =new ImageIcon("logos/mitsubishi.jpg");     
 
            // Create a new thread to display the image
@@ -277,11 +281,11 @@ public void bmw(){
             }
         });
         imageDisplayThread.start();
-       
-      }  
 
-     public void rolls_royce(){
-     ImageIcon rolls_royce =new ImageIcon("logos/rolls_royce.jpg");     
+  }
+
+  else if(car=="rolls_royce"){
+    ImageIcon rolls_royce =new ImageIcon("logos/rolls_royce.jpg");     
 
            // Create a new thread to display the image
            Thread imageDisplayThread = new Thread(new Runnable() {
@@ -305,9 +309,10 @@ public void bmw(){
         });
         imageDisplayThread.start();
        
-      }   
 
-      public void subaru(){
+  }
+
+  else if(car=="subaru"){
      ImageIcon subaru =new ImageIcon("logos/subaru.jpg");     
 
            // Create a new thread to display the image
@@ -332,11 +337,11 @@ public void bmw(){
         });
         imageDisplayThread.start();
        
-      }    
 
-     
-       public void toyota(){
-     ImageIcon toyota =new ImageIcon("logos/toyota.jpg");     
+  }
+
+  else if(car=="toyota"){
+      ImageIcon toyota =new ImageIcon("logos/toyota.jpg");     
 
            // Create a new thread to display the image
            Thread imageDisplayThread = new Thread(new Runnable() {
@@ -358,14 +363,21 @@ public void bmw(){
                 }                         
             }
         });
-        imageDisplayThread.start();
-       
-      }  
+        imageDisplayThread.start();      
+
+  }
+
+
+return car;
+}          
+  
+
   
   public static void main(String[] args) {   
         Main main=new Main(); 
         
-      }}    
+      }
+    }    
     
     
 
