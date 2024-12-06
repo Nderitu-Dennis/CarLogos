@@ -71,13 +71,13 @@ public class Main extends JFrame {
 
     add(panel);
 
-    btn1.addActionListener(e->{  
-      timerFunction(); 
+    btn1.addActionListener(e->{
+      timerFunction();
       carModel("bmw");
-     
+
     });
 
-    btn2.addActionListener(e->{         
+    btn2.addActionListener(e->{
       timerFunction();
       carModel("audi");
     });
@@ -85,37 +85,37 @@ public class Main extends JFrame {
 
     btn3.addActionListener(e->{
       carModel("mazda");
-      timerFunction();      
+      timerFunction();
     });
 
      btn4.addActionListener(e->{
       carModel("mercedes");
-      timerFunction();      
+      timerFunction();
     });
 
      btn5.addActionListener(e->{
       carModel("mitsubishi");
-      timerFunction();      
+      timerFunction();
     });
 
      btn6.addActionListener(e->{
       carModel("rolls_royce");
-      timerFunction();      
+      timerFunction();
     });
 
      btn7.addActionListener(e->{
        carModel("subaru");
-      timerFunction();      
+      timerFunction();
     });
 
      btn8.addActionListener(e->{
        carModel("toyota");
-      timerFunction();      
+      timerFunction();
     });
 
-    btnClose.addActionListener(e->{      
+    btnClose.addActionListener(e->{
       System.exit(0);
-      
+
     });
   }
 
@@ -132,16 +132,16 @@ public class Main extends JFrame {
         if(count==0){
           ((Timer) e.getSource()).stop();
           //displays the name of the logo after the countdown
-    
-        }     
+
+        }
 
         count--;
       }
-      
+
     });
-    timer.start();  
-    
-  } 
+    timer.start();
+
+  }
 
   public String carModel(String car){
     
@@ -369,11 +369,10 @@ public class Main extends JFrame {
 
 
 return car;
-}          
-  
+}
 
-  
-  public static void main(String[] args) {   
+  public static void main(String[] args) {
+      System.out.println("this is very shitty code!");
         Main main=new Main(); 
         
       }
